@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@500;600;700&family=Red+Hat+Display:wght@400;500;700;800&family=Roboto+Mono:wght@400&display=swap');
+
+:root {
+  --bg-top: #fb6e44;
+  --bg-middle: #8e261e;
+  --bg-bottom: #18181a;
+  --panel: rgb(255, 235, 221, 1);
+  --panel-strong: #f9f4e8;
+  --text: #182228;
+  --text-soft: #5a676f;
+  --horse-icon-color: #000000;
+  --horse-icon-background-color: #ece7df;
+  --accent: #d08f2f;
+  --accent-strong: #b56c1c;
+  --success: #1f9d5a;
+  --danger: #bf3d2a;
+  --track-line: #26566f;
+  --surface-edge: rgba(24, 34, 40, 0.18);
+  --focus: #1f9bcf;
+  --progress-completed-bg: #2a9d5f;
+  --progress-completed-text: #effff5;
+  --progress-next-bg: #1f3f73;
+  --progress-next-text: #ecf2ff;
+  --progress-pending-bg: #acb4c1;
+  --progress-pending-text: #39485c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+#app {
+  min-height: 100dvh;
+  font-family: 'Red Hat Display', Arial, sans-serif;
+
+  background-image: url('/homepage-hero-bg-scaled-1_.webp');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+  background-color: var(--bg-bottom);
+
+  color: var(--text);
+}
+
+@media (max-width: 695px) {
+  #app {
+    background-image: url('/homepage-hero-mobile-2-1.webp');
+  }
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.app-shell {
+  min-height: 100dvh;
+}
+
+.page {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+}
+
+.panel {
+  width: min(960px, 100%);
+  min-width: 300px;
+  background: var(--panel);
+  border: 1px solid var(--surface-edge);
+  border-radius: 20px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
+}
+
+.page-title {
+  font-size: clamp(1.5rem, 2.8vw, 2.4rem);
+  margin: 0;
+}
+
+.page-subtitle {
+  color: var(--text-soft);
+  margin: 8px 0 0;
+}
+
+.screen-center {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.stopwatch {
+  font-family: 'Roboto Mono', monospace;
+  font-style: normal;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
+  display: inline-block;
+  min-width: 9ch;
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .page {
+    padding: 24px;
+  }
+}
